@@ -1,0 +1,41 @@
+body{
+    font-size: 100%;
+}
+
+h1{
+    font-style: italic;
+    font-size: 20;
+}
+
+h2{
+    font-weight:bold;
+    font-size:2.5em;
+    font-weight:normal;
+}
+
+h3{
+    text-decoration: underline;
+    text-align: right;
+}
+
+p{
+    text-align: justify;
+    text-indent: 50;
+    letter-spacing: 3;
+    line-height: 50;
+    word-spacing: 3;
+}
+
+span{
+    text-transform: uppercase;
+}
+
+a, li{
+    text-decoration: none;
+}
+
+div{
+    direction: rtl;
+}
+
+

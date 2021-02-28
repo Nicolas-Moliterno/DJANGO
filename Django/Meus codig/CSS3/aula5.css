@@ -1,0 +1,17 @@
+.div1{
+    width: 300;
+    height: 300;
+    background-color: silver;
+}
+
+.div2{
+    width: 300;
+    height: 300;
+    background-color: aqua;
+}
+
+.div3{
+    width: 300;
+    height: 300;
+    background-color: rgba(0,   0, 255, 0.5)
+}

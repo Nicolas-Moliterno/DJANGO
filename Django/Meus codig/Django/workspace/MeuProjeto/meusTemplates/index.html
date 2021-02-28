@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block main%}
+<h1 class = "programefacil">Ola Mundo</h1>
+
+
+{{minha_variavel}}
+
+
+
+{% if sexo == 'm' %}
+    Ola senhor {{nome}}
+
+
+{% elif sexo == 'f' %}
+    Ola senhora {{nome}}
+
+{%else%}
+    Ola {{nome}}
+
+{% endif %}
+
+<br>
+<br>
+<p>loops</p>
+
+<ul>
+{% for pessoa in lista %}
+    
+    {% if pessoa.sexo == 'm' %}
+        <li>Ola senhor {{pessoa.nome}}</li>
+
+
+    {% elif pessoa.sexo == 'f' %}
+        <li>Ola senhora {{pessoa.nome}}</li>
+
+    {%else%}
+        Ola {{pessoa.nome}}
+
+    {% endif %}
+
+{%endfor%}
+</ul>
+
+    {% include 'footer.html' %}
+
+{%endblock%}

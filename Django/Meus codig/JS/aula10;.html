@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <script type="text/javascript">
+               var lista = ['joao','maria','jose']
+
+               for(item in lista){
+                   console.log(lista[item]);
+               }
+               for(item of lista){
+                   console.log(item);
+               }
+
+               var lista3 = [{nome:'fulano', idade: 28},
+                        {nome: 'ciclano', idade:29}]
+                for(item of lista3){
+                    console.log(item.nome + '-' + item.idade)
+                }
+
+                for(letra of 'Curso de programaçao'){
+                    console.log(letra);
+                }
+
+                var str = 'curso de programaçao';
+
+                    for(var i=0;i<str.length;i++){
+                        console.log(str[i]);
+
+                }
+
+
+        </script>
+    
+    </body>
+</html>

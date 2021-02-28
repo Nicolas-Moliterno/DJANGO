@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+
+<div class="row">
+
+    <div class="col">
+<h2>Updating MovMensalista : {{ mov_mensalista }}</h2>
+
+<form action="{% url 'core_movmensalista_update' mov_mensalista.id %}" method="POST">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+
+    <a href="{% url 'core_movmensalista_delete' mov_mensalista.id %}" class="btn btn-danger">Delete</a>
+
+</form>
+
+
+    </div>
+</div>
+
+{% endblock main %}

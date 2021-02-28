@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+
+
+{% block menu %}
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+        <a class="nav-link active" href="/sistema">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Serviços</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="/sistema/pessoas">Pessoas</a>
+            <a class="dropdown-item" href="/sistema/veiculos">Veiculos</a>
+            <a class="dropdown-item" href="/sistema/mov-rot">Rotativo</a>
+            <a class="dropdown-item" href="/sistema/mensalistas">Mensalista</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+        </li>
+
+
+            
+        
+        {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link disabled" href="">Ola,{{user}}</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+            </li>
+        {% else %}
+            <li class="nav-item">
+                <a class="nav-link " href="{% url 'login' %}">Login</a>
+            </li>
+        {% endif %}
+    </ul>
+{% endblock menu %}
+    
+
+
+{% block main %}
+
+    <div class="row">
+            <div class="col">
+                    <h1>Seja Bem vindo ao sistema</h1>
+
+                    <a href="/admin/login/?next=/sistema/">Clique aqui para entrar</a>
+            </div>
+    </div>
+    
+{% endblock main %}
+    

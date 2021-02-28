@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Forms inputs e eventos</title>
+
+        <script type="text/javascript">
+                function incrementa(){
+                    document.getElementById('nota').value +=10;
+                }
+                function decremementa(){
+                    document.getElementById('nota').value -=10;
+                }
+
+        </script>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <form method="GET" action="#"><!--action remete a url-->
+
+            <fieldset><!--agrupamento de campos-->
+                <legend>Dados Pessoais</legend>
+                <input type="radio" id="radio"> <label for="radio">Click me</label>
+                <input type="text" name="nome" placeholder="Digite seu nome aqui"> 
+            </fieldset>
+
+          
+
+
+            <input list="browser"/>
+                <datalist id="browser">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Opera">
+                <option value="Thor">  
+                </datalist>
+
+                <!-- O segundo valor estará selecionado inicialmente -->
+                <select name="select">
+                    <option value="valor1">Valor 1</option> 
+                    <option value="valor2" selected>Valor 2</option>
+                    <option value="valor3">Valor 3</option>
+                </select>
+
+                <button type="submit">Enviar</button>
+
+                <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
+
+
+                0<input type="range" name="b" value="50" />100 +<input type="number" name="a" value="10" /> =
+                <output name="result"></output>
+                <button type="submit">Enviar</button>
+
+            <br>
+            <progress value="70" max="100" id="nota">70 %</progress>
+            <button onclick="incrementa()">incrementa</button>
+            <button onclick="decremementa()">decrementa</button>
+
+            <br>
+
+            <input type="checkbox" name="mycheckbox">
+            <input type="color" name="color"><br>
+            <input type="date" name="date">
+
+            <label for="birthdaytime">Birthday (date and time):</label>
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime"> 
+            <br>
+            <label for="myfile">Select a file:</label>
+            <input type="file" id="myfile" name="myfile"> 
+            <br>
+            <label for="bdaymonth">Birthday (month and year):</label>
+            <input type="month" id="bdaymonth" name="bdaymonth">
+            <br>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd"> 
+            <br>
+            <label for="vol">Volume (between 0 and 50):</label>
+            <input type="range" id="vol" name="vol" min="0" max="50">
+            <br>
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="reset">reset</button>
+
+
+            <hr>
+            <h1 onmouseover="alert('Mouse over')">MOuse OVer</h1>
+            <h1 onmouseleave="decremementa()" onmouseover="incrementa()">decrementa</h1>
+            
+
+
+
+
+
+        </form>
+
+       
+
+    
+    </body>
+</html>

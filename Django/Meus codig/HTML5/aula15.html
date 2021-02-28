@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web storage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <script type="text/javascript">
+                function salva() {
+                    if (typeof(Storage) !== "undefined") {
+                    // Code for localStorage/sessionStorage.
+                            localStorage.setItem("nome", "programe facil");
+                            localStorage.setItem("carreiras", "front,back e full stack");
+                            sessionStorage.setItem("carreiras", "front,back e full stack");
+                    } else {
+                    // Sorry! No Web Storage support..
+                        alert("seu navegador nao suporta web storage");
+                    }
+                }
+
+                function ler() {
+                    if (typeof(Storage) !== "undefined") {
+                    // Code for localStorage/sessionStorage.
+                            document.getElementById("resultado").innerHTML = localStorage.getItem("carreiras");
+                    } else {
+                    // Sorry! No Web Storage support..
+                        alert("seu navegador nao suporta web storage");
+                    }
+                }
+
+                function remover() {
+                    if (typeof(Storage) !== "undefined") {
+                    // Code for localStorage/sessionStorage.
+                    localStorage.removeItem("nome");
+                    } else {
+                    // Sorry! No Web Storage support..
+                        alert("seu navegador nao suporta web storage");
+                    }
+                }
+        </script>
+    </head>
+    <body>
+
+        <div id="resultado"></div>
+
+        <button onclick="remover()">REMOVER</button>
+
+        <button onclick="ler()">ler</button>
+        <button onclick="salva()">salvar</button>
+    
+    </body>
+</html>

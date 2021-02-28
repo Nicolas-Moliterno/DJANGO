@@ -1,0 +1,265 @@
+body{
+    font-family: Helvetica,Arial, Helvetica;
+    background-color: beige;
+    display: flex;
+}
+
+header{
+
+    float:left;
+    background-color: greenyellow;
+    width: 100%;
+}
+
+header p{
+    float: right;
+}
+
+a{
+    color: green;
+    text-decoration: none;
+    font-weight: bold;    
+}
+
+a:hover{
+    color: violet;
+    background: #0B486B;
+    padding: 20px 5px;
+}
+
+#logo{
+    float: left;
+    width: 40%;
+    height: 40%;
+    display: block; 
+    
+}
+
+.depoimentos{
+
+    color:red;
+}
+
+.depoimentos:hover{
+    background-color: #888888;
+    color:sienna;
+}
+
+#gerais1{
+
+    color:purple;
+}
+#prom1:hover{
+    background-color: red;
+}
+#prom2:hover{
+    background-color: red;
+}
+
+#gerais1:hover{
+    background-color: red;
+}
+#gerais2:hover{
+    background-color: red;
+}
+
+
+#gerais2{
+
+    color:teal;
+}
+
+nav{
+    float: right;
+    padding: 20px;
+}
+
+
+#menu-icon{
+    display: hidden;
+    width: 40%;
+    height: 40%;
+    background: black url(../img/menu-icon.png) center;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    display: inline-block;
+    float: left;
+    padding: 10px;
+}
+
+
+footer{
+    background-color: #0B486B;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+/*media query*/
+
+@media only screen and (max-width:640px){
+    #menu-icon{
+        display: inline-block;
+    }
+
+    nav ul{
+        display:none;
+        position:absolute;
+        right: 20px;
+        top: 60px;
+        padding: 20px;
+        background: #fff;
+        width: 15%;
+    }
+
+    nav li{
+        text-align: left;
+        width: 100%;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    nav:hover ul{
+        display: block;
+    }
+
+    nav li a{
+        color: #3b8686;
+    }
+
+    p{
+        text-align: justify;
+    }
+
+    .depoimentos{
+        box-shadow: 10px 10px 5px #888888;
+        border-radius: 5px;
+        width: 95%;
+        padding-right: 5px;
+    }
+    
+    nav#nav-footer{
+        display: none;
+    }
+
+    #copyright p{
+        text-align: center;
+    }
+
+}
+
+
+/*media query ipad*/
+@media only screen and (min-width:481px){
+    #menu-icon{
+        display: hidden;
+    }
+
+    body{
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    header{
+        height: 250px;
+    }
+
+    section{
+        height: 250px;
+        clear: both;
+    }
+
+    #prom1{
+        width: 48%;
+        float: left;
+    }
+
+    #prom2{
+        width: 48%;
+        float: right;
+    }
+
+    #gerais1, #gerais2, #gerais3{
+        float: left;
+        width: 32%;
+    }
+
+    
+
+    #gerais2 img{
+        margin-left: 23%;
+    }
+
+    .depoimentos{
+        box-shadow: 10px 10px 5px #888888;
+        border-radius: 5px;
+        width: 47%;
+        float: left;
+        margin: 0 0 15px 15px;
+    }
+
+    footer{
+        height: 200px;
+        clear: both;
+    }
+
+    .copyright{
+        
+    }
+
+    #slogan{
+        margin-right: 10px;
+        font-weight: bold;
+        letter-spacing: 7px;
+    }
+
+}
+
+/*media query ipad*/
+@media only screen and (min-width:960px){
+   
+    body{
+        width: 960px;
+        
+    }
+
+    
+
+}
+
+
+
+
+#informacoes{
+    clear: both;
+    width: 100%;
+}
+
+
+input[type=text], textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.button{
+    background-color: #0B486B;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
